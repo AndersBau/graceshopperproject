@@ -16,4 +16,4 @@ In the backend:
 - PostgreSQL for DB management
 - Sequelize as an ORM.
 
-view Live demo here
+
