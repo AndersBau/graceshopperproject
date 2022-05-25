@@ -17,7 +17,6 @@ router.get("/", async (req, res) => {
 router.get("/:productId", async (req, res) => {
   try {
     const myProduct = await Product.findByPk(req.params.productId);
-    console.log("LOGGING myProduct: ", myProduct);
     res.send(myProduct);
   } catch (error) {
     console.log(error);
@@ -46,9 +45,8 @@ router.delete("/:productId", async (req, res) => {
 
 router.put("/:productId", async (req, res) => {
   try {
-    console.log("this is the body ", req.body);
     const product = await Product.findByPk(req.params.productId);
-    console.log("this the Product", product);
+
     res.send(
       await product.update({
         name: req.body.name,
@@ -58,7 +56,6 @@ router.put("/:productId", async (req, res) => {
         productType: req.body.productType,
       })
     );
-    console.log("after presumed update", product);
   } catch (error) {
     console.log(error);
   }

@@ -17,3 +17,10 @@ In the backend:
 - Sequelize as an ORM.
 
 
+To try the project:
+
+1. run `npm Install`
+
+3. Sync and seed the database by running `npm run seed`.
+
+3. run `npm run start:dev` to run the store with nodemon.
