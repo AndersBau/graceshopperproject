@@ -1,18 +1,8 @@
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-}
-body,
-#root {
-  height: 100vh;
+body {
+  font-family: 'Puritan', sans-serif;
+  font-weight: 800;
+  color:#eeeef6;
   margin: 0;
-}
-body,
-input,
-select,
-textarea {
-  font-size: 1.6rem;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 a {
