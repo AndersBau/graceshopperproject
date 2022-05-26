@@ -6,7 +6,7 @@ import GuestHomePage from './GuestHomePage'
  */
 export const Home = props => {
 
-  const {username          } = props
+  const {username} = props
 
   return (
     <div>
