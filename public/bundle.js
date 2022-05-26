@@ -2490,35 +2490,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class Cart extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
-  constructor(props) {
-    super(props); //this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
   componentDidMount() {
     this.props.fetchCart();
   }
 
   componentWillUnmount() {
     console.log('I SHOULD NOT BE HERE');
-  } //  handleSubmit(evt) {
-  //     evt.preventDefault();
-  //     this.props.updateCart(
-  //       this.props.match.params.cartId,
-  //       this.props.match.params.productId
-  //     );
-  //     this.props.fetchCart(this.props.match.params.cartId);
-  //   }
-
+  }
 
   render() {
-    //console.log('+++++++++PROPS: ', this.props)
-    //console.log('THIS.STATE: ///////', this.state.quantity);
     console.log(this.props.cartItems);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "grid_container"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "cart",
-      id: "cart"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_3__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
+      className: "cart-items"
     }, this.props.cartItems.map(cartItem => {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         key: cartItem.productId
@@ -2540,11 +2525,11 @@ class Cart extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
         type: "submit"
       }, "Update Quantity")));
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
       to: '/cart/checkout'
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
       className: "checkoutBtn"
-    }, "Checkout"))));
+    }, "Checkout")));
   }
 
 }

@@ -4,11 +4,6 @@ import { fetchCart, updateCart } from "../store/cart";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 export class Cart extends React.Component {
-  constructor(props) {
-    super(props);
-
-    //this.handleSubmit = this.handleSubmit.bind(this);
-  }
 
   componentDidMount() {
       this.props.fetchCart();
@@ -19,19 +14,7 @@ export class Cart extends React.Component {
   }
 
 
-
-  //  handleSubmit(evt) {
-  //     evt.preventDefault();
-  //     this.props.updateCart(
-  //       this.props.match.params.cartId,
-  //       this.props.match.params.productId
-  //     );
-  //     this.props.fetchCart(this.props.match.params.cartId);
-  //   }
-
   render() {
-    //console.log('+++++++++PROPS: ', this.props)
-    //console.log('THIS.STATE: ///////', this.state.quantity);
     console.log(this.props.cartItems)
     return (
 
@@ -39,7 +22,7 @@ export class Cart extends React.Component {
       <header>
         <Navbar/>
       </header>
-        <div className="cart" id="cart">
+       <ul className="cart-items">
           {this.props.cartItems.map((cartItem) => {
             return (
               <div key={cartItem.productId}>
@@ -64,9 +47,9 @@ export class Cart extends React.Component {
               </div>
             );
           })}
+          </ul>
           <Link to={'/cart/checkout'}><button className="checkoutBtn">Checkout</button></Link>
         </div>
-      </div>
     );
   }
 }
