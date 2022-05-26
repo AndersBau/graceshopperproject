@@ -1,28 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const GuessHomePage = () => {
   return (
     <div className="grid-container">
-      <div className="home_header">
-        <Link to="/products">
-          <h2>Shop Now</h2>
-        </Link>
-      </div>
+      <header>
+        <Navbar/>
+      </header>
 
-      <div className="home_products">
-        <Link to="/products">
-          <div id="products"> Products </div>
-        </Link>
-
-        <Link to="/products">
-          <div id="products"> Products </div>
-        </Link>
-
-        <Link to="/products">
-          <div id="products"> Products </div>
-        </Link>
-
+      <div className="main">
         <Link to="/products">
           <div id="products"> Products </div>
         </Link>
