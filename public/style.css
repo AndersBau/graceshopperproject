@@ -4,12 +4,10 @@ body {
   color:#eeeef6;
   margin: 0;
 }
-
 a {
   text-decoration: none;
   color: #e9eaf6;
 }
-
 label {
   display: block;
 }
