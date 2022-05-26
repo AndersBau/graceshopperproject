@@ -1,9 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import GuestHomePage from './GuestHomePage'
-/**
- * COMPONENT
- */
+
 export const Home = props => {
 
   const {username} = props
