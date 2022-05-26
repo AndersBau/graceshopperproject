@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchCart, updateCart } from "../store/cart";
 import { Link } from "react-router-dom";
-
+import Navbar from "./Navbar";
 export class Cart extends React.Component {
   constructor(props) {
     super(props);
@@ -34,8 +34,11 @@ export class Cart extends React.Component {
     //console.log('THIS.STATE: ///////', this.state.quantity);
     console.log(this.props.cartItems)
     return (
-      // <div>HELLO WORLD</div>
-      <div>
+
+      <div className="grid_container">
+      <header>
+        <Navbar/>
+      </header>
         <div className="cart" id="cart">
           {this.props.cartItems.map((cartItem) => {
             return (
