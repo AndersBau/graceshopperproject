@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const GuessHomePage = () => {
   return (
-    <div className="homecontainer">
+    <div className="grid-container">
       <div className="home_header">
         <Link to="/products">
           <h2>Shop Now</h2>
