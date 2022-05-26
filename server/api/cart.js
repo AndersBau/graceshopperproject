@@ -19,7 +19,7 @@ const hasToken = async (req, res, next) => {
 
 
 //Route for when user clicks his/her cart
-//price, name, quantity
+
 router.get("/", hasToken, async (req, res) => {
   try {
     const user = req.user;
