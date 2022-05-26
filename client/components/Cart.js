@@ -13,7 +13,6 @@ export class Cart extends React.Component {
     console.log('I SHOULD NOT BE HERE')
   }
 
-
   render() {
     console.log(this.props.cartItems)
     return (
