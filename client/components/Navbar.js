@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { logout } from "../store";
 
 const Navbar = ({ handleClick, isLoggedIn }) => (
-  <div className="nav_bar">
+  <nav>
     <h1>
       <Link to="/home">The Super Store</Link>
     </h1>
@@ -27,7 +27,7 @@ const Navbar = ({ handleClick, isLoggedIn }) => (
         </div>
       )}
     </nav>
-  </div>
+  </nav>
 );
 
 /**

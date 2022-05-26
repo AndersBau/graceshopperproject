@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchProducts } from "../store/products";
 import { Link } from "react-router-dom";
-
+import Navbar from "./Navbar";
 export class Products extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +14,10 @@ export class Products extends React.Component {
 
   render() {
     return (
-      <div className="product_container">
+      <div className="grid_container">
+        <header>
+          <Navbar/>
+        </header>
         <div id="product-list">
           {this.props.products.map((product) => {
             return (

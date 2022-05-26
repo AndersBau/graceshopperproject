@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { fetchSingleProduct } from "../store/singleProduct";
 import { addProductToCart } from "../store/cart";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 export class SingleProduct extends React.Component {
   constructor(props) {
@@ -21,6 +22,10 @@ export class SingleProduct extends React.Component {
   render() {
     const product = this.props.product;
     return (
+      <div className="grid-container">
+      <header>
+      <Navbar/>
+    </header>
       <div className="singleProduct_container">
         <div className="singleProduct_image">
           <img src={product.imageUrl}></img>
@@ -44,6 +49,7 @@ export class SingleProduct extends React.Component {
             <button className="singlePoster_info-goToCart">Go to cart</button>
           </Link> */}
         </div>
+      </div>
       </div>
     );
   }
